@@ -4,10 +4,10 @@ import (
 	"bufio"
 	"errors"
 
+	regexp "github.com/wasilibs/go-re2"
 	"net"
 	"os"
 	"path/filepath"
-	"regexp"
 
 	"github.com/projectdiscovery/httpx/common/stringz"
 	fileutil "github.com/projectdiscovery/utils/file"
@@ -34,7 +34,7 @@ func LoadFile(filename string) (lines []string) {
 	if err != nil {
 		return
 	}
-	defer f.Close() //nolint
+	defer f.Close() // nolint
 	s := bufio.NewScanner(f)
 	for s.Scan() {
 		lines = append(lines, s.Text())

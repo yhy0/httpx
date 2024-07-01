@@ -3,8 +3,8 @@ package httpx
 import (
 	"bytes"
 	"fmt"
+	regexp "github.com/wasilibs/go-re2"
 	"io"
-	"regexp"
 	"strings"
 
 	stringsutil "github.com/projectdiscovery/utils/strings"
@@ -50,9 +50,9 @@ func ExtractTitle(r *Response) (title string) {
 	return title
 }
 
-func CanHaveTitleTag(mimeType string) bool {  
-    return slices.Contains(supportedTitleMimeTypes, mimeType)  
-}  
+func CanHaveTitleTag(mimeType string) bool {
+	return slices.Contains(supportedTitleMimeTypes, mimeType)
+}
 
 func getTitleWithDom(r *Response) (*html.Node, error) {
 	var title *html.Node
@@ -80,7 +80,7 @@ func getTitleWithDom(r *Response) (*html.Node, error) {
 func renderNode(n *html.Node) string {
 	var buf bytes.Buffer
 	w := io.Writer(&buf)
-	html.Render(w, n) //nolint
+	html.Render(w, n) // nolint
 	return buf.String()
 }
 

@@ -3,8 +3,8 @@ package httpx
 import (
 	"bytes"
 	"fmt"
+	regexp "github.com/wasilibs/go-re2"
 	"net/url"
-	"regexp"
 	"strings"
 
 	"github.com/PuerkitoBio/goquery"

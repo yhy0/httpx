@@ -51,7 +51,10 @@ require (
 	golang.org/x/text v0.16.0
 )
 
-require github.com/weppos/publicsuffix-go v0.30.1
+require (
+	github.com/wasilibs/go-re2 v1.6.0
+	github.com/weppos/publicsuffix-go v0.30.1
+)
 
 require (
 	aead.dev/minisign v0.2.0 // indirect
@@ -73,7 +76,7 @@ require (
 	github.com/cnf/structhash v0.0.0-20201127153200-e1b16c1ebc08 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/dimchansky/utfbom v1.1.1 // indirect
-	github.com/dlclark/regexp2 v1.8.1 // indirect
+	github.com/dlclark/regexp2 v1.11.0 // indirect
 	github.com/docker/go-units v0.5.0 // indirect
 	github.com/dsnet/compress v0.0.2-0.20210315054119-f66993602bf5 // indirect
 	github.com/fatih/color v1.15.0 // indirect
@@ -125,6 +128,8 @@ require (
 	github.com/shoenig/go-m1cpu v0.1.6 // indirect
 	github.com/ssor/bom v0.0.0-20170718123548-6386211fdfcf // indirect
 	github.com/syndtr/goleveldb v1.0.0 // indirect
+	github.com/tetratelabs/wazero v1.7.3 // indirect
+	github.com/thoas/go-funk v0.9.3 // indirect
 	github.com/tidwall/btree v1.6.0 // indirect
 	github.com/tidwall/buntdb v1.3.0 // indirect
 	github.com/tidwall/gjson v1.14.4 // indirect
@@ -160,3 +165,5 @@ require (
 	gopkg.in/ini.v1 v1.67.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
+
+replace github.com/projectdiscovery/wappalyzergo v0.1.8 => github.com/yhy0/wappalyzergo v0.0.0-20240701084257-c230243e9d8e

@@ -1,6 +1,6 @@
 package httputilz
 
-import "regexp"
+import regexp "github.com/wasilibs/go-re2"
 
 var (
 	normalizeSpacesRegex = regexp.MustCompile(`\s+`)

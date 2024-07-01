@@ -1,7 +1,7 @@
 package httpx
 
 import (
-	"regexp"
+	regexp "github.com/wasilibs/go-re2"
 
 	stringsutil "github.com/projectdiscovery/utils/strings"
 )

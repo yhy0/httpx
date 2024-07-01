@@ -2,9 +2,9 @@ package runner
 
 import (
 	"fmt"
+	regexp "github.com/wasilibs/go-re2"
 	"math"
 	"os"
-	"regexp"
 	"strings"
 	"time"
 
@@ -293,7 +293,7 @@ type Options struct {
 	OutputFilterCondition     string
 	OutputMatchCondition      string
 	StripFilter               string
-	//The OnResult callback function is invoked for each result. It is important to check for errors in the result before using Result.Err.
+	// The OnResult callback function is invoked for each result. It is important to check for errors in the result before using Result.Err.
 	OnResult           OnResultCallback
 	DisableUpdateCheck bool
 	NoDecode           bool

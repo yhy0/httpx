@@ -7,6 +7,7 @@ import (
 	"encoding/csv"
 	"encoding/json"
 	"fmt"
+	regexp "github.com/wasilibs/go-re2"
 	"html/template"
 	"image"
 	"io"
@@ -17,7 +18,6 @@ import (
 	"path"
 	"path/filepath"
 	"reflect"
-	"regexp"
 	"slices"
 	"sort"
 	"strconv"
@@ -378,7 +378,7 @@ func (runner *Runner) createNetworkpolicyInstance(options *Options) (*networkpol
 	for _, exclude := range options.Exclude {
 		switch {
 		case exclude == "cdn":
-			//implement cdn check in netoworkpolicy pkg??
+			// implement cdn check in netoworkpolicy pkg??
 			runner.excludeCdn = true
 			continue
 		case exclude == "private-ips":
@@ -440,7 +440,7 @@ func (r *Runner) prepareInput() {
 			expandedTarget := r.countTargetFromRawTarget(target)
 			if expandedTarget > 0 {
 				numHosts += expandedTarget
-				r.hm.Set(target, nil) //nolint
+				r.hm.Set(target, nil) // nolint
 			}
 		}
 	}
@@ -578,7 +578,7 @@ func (r *Runner) loadAndCloseFile(finput *os.File) (numTargets int, err error) {
 		expandedTarget := r.countTargetFromRawTarget(target)
 		if expandedTarget > 0 {
 			numTargets += expandedTarget
-			r.hm.Set(target, nil) //nolint
+			r.hm.Set(target, nil) // nolint
 		}
 	}
 	err = finput.Close()
@@ -805,7 +805,7 @@ func (r *Runner) RunEnumeration() {
 			if err != nil {
 				gologger.Fatal().Msgf("Could not open/create index file '%s': %s\n", r.options.Output, err)
 			}
-			defer indexFile.Close() //nolint
+			defer indexFile.Close() // nolint
 		}
 
 		if r.options.Screenshot {
@@ -819,7 +819,7 @@ func (r *Runner) RunEnumeration() {
 			if err != nil {
 				gologger.Fatal().Msgf("Could not open/create index screenshot file '%s': %s\n", r.options.Output, err)
 			}
-			defer indexScreenshotFile.Close() //nolint
+			defer indexScreenshotFile.Close() // nolint
 		}
 
 		for resp := range output {
@@ -2360,7 +2360,7 @@ func (r *Runner) SaveResumeConfig() error {
 }
 
 // JSON the result
-func (r Result) JSON(scanopts *ScanOptions) string { //nolint
+func (r Result) JSON(scanopts *ScanOptions) string { // nolint
 	if scanopts != nil && len(r.ResponseBody) > scanopts.MaxResponseBodySizeToSave {
 		r.ResponseBody = r.ResponseBody[:scanopts.MaxResponseBodySizeToSave]
 	}
@@ -2373,7 +2373,7 @@ func (r Result) JSON(scanopts *ScanOptions) string { //nolint
 }
 
 // CSVHeader the CSV headers
-func (r Result) CSVHeader() string { //nolint
+func (r Result) CSVHeader() string { // nolint
 	buffer := bytes.Buffer{}
 	writer := csv.NewWriter(&buffer)
 
@@ -2394,7 +2394,7 @@ func (r Result) CSVHeader() string { //nolint
 }
 
 // CSVRow the CSV Row
-func (r Result) CSVRow(scanopts *ScanOptions) string { //nolint
+func (r Result) CSVRow(scanopts *ScanOptions) string { // nolint
 	if scanopts != nil && len(r.ResponseBody) > scanopts.MaxResponseBodySizeToSave {
 		r.ResponseBody = r.ResponseBody[:scanopts.MaxResponseBodySizeToSave]
 	}
