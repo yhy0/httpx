@@ -363,8 +363,8 @@ github.com/weppos/publicsuffix-go v0.30.1 h1:8q+QwBS1MY56Zjfk/50ycu33NN8aa1iCCEQ
 github.com/weppos/publicsuffix-go v0.30.1/go.mod h1:s41lQh6dIsDWIC1OWh7ChWJXLH0zkJ9KHZVqA7vHyuQ=
 github.com/xi2/xz v0.0.0-20171230120015-48954b6210f8 h1:nIPpBwaJSVYIxUFsDv3M8ofmx9yWTog9BfvIu0q41lo=
 github.com/xi2/xz v0.0.0-20171230120015-48954b6210f8/go.mod h1:HUYIGzjTL3rfEspMxjDjgmT5uz5wzYJKVo23qUhYTos=
-github.com/yhy0/wappalyzergo v0.0.0-20240701084257-c230243e9d8e h1:sh8zt6iFq7AMnl3TpFWzFqUqgsfL9JXPki5sArzlkEI=
-github.com/yhy0/wappalyzergo v0.0.0-20240701084257-c230243e9d8e/go.mod h1:NlCNNokYymu6MfavO3eBoqRIyYnGEYiHwJDLPeCzMuU=
+github.com/yhy0/wappalyzergo v0.0.0-20240703091843-96f4c697343a h1:2sjxkG+VIITiYKFjlnQWlWimiab7GQ7SgbgymtMu3ZM=
+github.com/yhy0/wappalyzergo v0.0.0-20240703091843-96f4c697343a/go.mod h1:NlCNNokYymu6MfavO3eBoqRIyYnGEYiHwJDLPeCzMuU=
 github.com/yl2chen/cidranger v1.0.2 h1:lbOWZVCG1tCRX4u24kuM1Tb4nHqWkDxwLdoS+SevawU=
 github.com/yl2chen/cidranger v1.0.2/go.mod h1:9U1yz7WPYDwf0vpNWFaeRh0bjwz5RVgRy/9UEQfHl0g=
 github.com/ysmood/fetchup v0.2.3 h1:ulX+SonA0Vma5zUFXtv52Kzip/xe7aj4vqT5AJwQ+ZQ=

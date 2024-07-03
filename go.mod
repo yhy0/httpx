@@ -166,4 +166,4 @@ require (
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
 
-replace github.com/projectdiscovery/wappalyzergo v0.1.8 => github.com/yhy0/wappalyzergo v0.0.0-20240701084257-c230243e9d8e
+replace github.com/projectdiscovery/wappalyzergo v0.1.8 => github.com/yhy0/wappalyzergo v0.0.0-20240703091843-96f4c697343a
