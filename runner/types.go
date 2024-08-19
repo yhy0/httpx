@@ -59,6 +59,7 @@ type Result struct {
 	Host               string                 `json:"host,omitempty" csv:"host"`
 	Path               string                 `json:"path,omitempty" csv:"path"`
 	FavIconMMH3        string                 `json:"favicon,omitempty" csv:"favicon"`
+	FavIconMD5         string                 `json:"favicon_md5,omitempty" csv:"favicon"`
 	FaviconPath        string                 `json:"favicon_path,omitempty" csv:"favicon_path"`
 	FaviconURL         string                 `json:"favicon_url,omitempty" csv:"favicon_url"`
 	FinalURL           string                 `json:"final_url,omitempty" csv:"final_url"`
@@ -66,7 +67,7 @@ type Result struct {
 	RawHeaders         string                 `json:"raw_header,omitempty" csv:"raw_header"`
 	Request            string                 `json:"request,omitempty" csv:"request"`
 	ResponseTime       string                 `json:"time,omitempty" csv:"time"`
-	Jarm               string                 `json:"jarm,omitempty" csv:"jarm"`
+	JarmHash           string                 `json:"jarm_hash,omitempty" csv:"jarm_hash"`
 	ChainStatusCodes   []int                  `json:"chain_status_codes,omitempty" csv:"chain_status_codes"`
 	A                  []string               `json:"a,omitempty" csv:"a"`
 	AAAA               []string               `json:"aaaa,omitempty" csv:"aaaa"`
